@@ -1,0 +1,150 @@
+
+* {
+padding: 0px;
+margin: 0px;
+font-family: 'Ubuntu', sans-serif;
+box-sizing: border-box;
+}
+
+body {
+    height: 1150px;
+    background-image: url("https://www.atriainnovation.com/wp-content/uploads/2021/02/portada.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* this is to make it more responsive */
+}
+
+
+.left img {
+    display:inline-block;
+    width: 13.6%;
+    margin-top: -13px;
+    margin-left: -20px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border-radius: 100%;
+}
+
+.center {
+    position: fixed;
+    top: 30px;
+    left: 235px;
+    display: block;
+    width: 1071px;
+    border: 5px solid rgb(85, 103, 155);
+    border-style: outset ;
+}
+
+.navbar {
+    list-style-type: none;
+    background-color: white;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 20px;
+    padding-right: 60px;
+    padding-left: 102px;
+    /* margin: auto; */
+    
+}
+
+.navbar li a {
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: rgb(97, 232, 18);
+    filter: hue-rotate(15deg);
+    animation: mymove 0.5s infinite;
+}
+
+@keyframes mymove {
+    50% {
+      -webkit-filter: invert(100%); 
+      filter: invert(100%)
+    }
+  }
+  
+.right {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    gap: 10px;
+}
+
+.btn{
+    padding: 5px 5px;
+    margin-right: 30px;
+    border-radius: 90%;
+    cursor:grabbing;
+    position: fixed;
+    bottom: 20px;
+    right: 18px;
+}
+
+.btn img {
+    width: 59px;
+    height: 59px;
+    border-radius: 90%;
+    filter: invert(100%);
+}
+
+.topbtn {
+    /* padding: 0px 5px; */
+    padding-right: 12px;
+    margin-right: 20px;
+    position: fixed;
+    top: 10px;
+    right: 32px;
+    border: none;
+    background-color: rgb(21, 177, 208);
+    border-radius: 20%;
+}
+
+.topbtn img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    cursor: pointer;
+    filter: invert(80%);
+}
+@keyframes mymove1 {
+    50% {
+      -webkit-filter: hue-rotate(95deg); 
+      filter: invert(100%);
+    }
+  }
+
+.topbtn:hover {
+    /* filter: invert(100%); */
+    animation: mymove1 4s infinite;
+}
+
+.btn:hover {
+    animation: mymove2 2.5s infinite;
+}
+
+@keyframes mymove2 {
+    50% {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+  }
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+    .center {
+        margin-top: 20px; /* Add some spacing between logo and navigation on small screens */
+    }
+    .navbar li {
+        padding: 10px 0; /* Adjust padding for better spacing on small screens */
+    }
+}
